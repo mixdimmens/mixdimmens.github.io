@@ -1,0 +1,271 @@
+:root {
+    /* color variabels */
+    --grey: rgb(237, 237, 237);
+    --pink: rgb(255, 219, 219);
+    --violet: rgb(240, 209, 228);
+    --green: rgb(178, 250, 246);
+    --textBlack: rgba(0, 1, 41, 0.918);
+    --textHover: rgba(37, 33, 32, 0.733);
+    --textHoverOrange: rgba(255, 38, 0, .733);
+
+    /* page margins */
+    margin: 0;
+
+    /* page-wide font default rules */
+    color: var(--textBlack);
+
+}
+
+/* remove border around body */
+body {
+    margin: 0;
+    cursor: url("../img/circle.svg"), auto;
+}
+
+/* fonts and text */
+
+.footerLink {
+    /* text-shadow: -0.5px 0.5px var(--textBlack); */
+    font-size: 1.2rem;
+    color: var(--textBlack);
+}
+
+/* footer color animation */
+
+/*#shhhFooterLogo {
+    fill: var(--textBlack);
+    stroke: var(--textBlack);
+    stroke-width: 0.5px;
+} 
+
+.footerLink, #shhhFooterLogo {
+    animation: textAnimation 10s ease-in 0s infinite alternate none;
+}
+
+@keyframes textAnimation {
+    0% {color: var(--violet); fill: var(--violet);text-shadow: -0.5px 0.5px var(--textBlack)}
+    33% {color: var(--green); fill: var(--green);text-shadow: -0.5px 0.5px var(--textBlack)}
+    66% {color: var(--pink); fill: var(--pink); text-shadow: -0.5px 0.5px var(--textBlack);}
+    100% {color: var(--green); fill: var(--green);text-shadow: -0.5px 0.5px var(--textBlack)}
+} */
+
+a.footerLink:hover, #shhhFooterLogo:hover {
+    color: var(--textBlack);
+}
+
+/* background gradient animation  */
+.background {
+    margin: 0;
+
+    background: linear-gradient(var(--grey), var(--pink), var(--violet), var(--grey));
+    background-size: 800% 800%;
+    animation: backgroundAnimation 10s ease-in 0s infinite alternate none;
+
+}
+
+@keyframes backgroundAnimation {
+    0% {background-position: 0% 0%;}
+    33% {background-position: 33% 5%;}
+    66% {background-position: 66% 50%;}
+    100% {background-position: 100% 50%;}
+}
+
+.backgroundStretcher {
+    height: 100%;
+
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    /* display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+}
+
+/* content rules */
+#spacerVert {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.content {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+    /* flex: 1 0 auto;
+    flex-grow: 1;
+    text-align: center; */
+    /* font-family: 'Cormorant';
+    font-weight: 300; */
+}
+
+/* .homeBlock {
+    flex-shrink: 1;
+    min-height: 5rem;
+} */
+
+/* #wip {
+    animation: wipAni 5s ease-in 0s infinite normal none;
+    text-align: center;
+} */
+
+@keyframes wipAni {
+    0% {color: rgba(0, 0, 0, 1);}
+    50% {color: rgba(0, 0, 0, 0);}
+    100% {color: rgba(0, 0, 0, 1);}
+}
+
+#spacerVert {
+    flex-grow: 1;
+    text-align: center;
+}
+
+#homeLogo {
+    text-align: left;
+    height: 500px;
+    mix-blend-mode: multiply;
+    /* height: calc(563px * .5); */
+}
+
+#servicesGif {
+    text-align: center;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+
+/* footer rules  */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin: 0 auto;
+
+    border-top: 1px solid black;
+    /* flex-shrink: 0; */
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    animation: footerAnimation 10s ease-in 0s infinite alternate none;
+}
+
+.footerLink {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 100;
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: var(--textBlack);
+    cursor: url("../img/redCircle.svg"), auto;
+}
+
+a.footerLink:hover, #shhhFooterLogo:hover {
+    color: var(--textBlack);
+}
+
+@keyframes footerAnimation {
+    0% {background-color: var(--grey);}
+    33% {background-color: var(--pink);}
+    66% {background-color: var(--violet);}
+    100% {background-color: var(--grey);}
+}
+
+.footerLink {
+    flex-grow: 1;
+    text-align: center;
+    /* font-size: 1rem; */
+}
+
+#footerSpacer {
+    flex-grow: 5;
+}
+
+#shhhFooterLogo {
+    height: calc(90px * (25 / 90));
+    width: calc(452px * (25 / 90));
+    margin: .2rem;
+    flex-grow: 1;
+    fill: var(--textBlack);
+    transition: fill 1s;
+}
+
+#services, #about, #contact {
+    background-color: rgba(255, 255, 255, 0 );
+    color: var(--textBlack);
+    transition: background-color 1.5s;
+}
+
+#services:hover, #about:hover, #contact:hover {
+    background-color: var(--textHover);
+    color: white; 
+}
+
+#shhhFooterLogo:hover {
+    fill: white;
+    stroke: var(--textBlack);
+    stroke-width: 0.5px;
+}
+
+ /* @media only screen 
+
+and (min-device-width: 320px) 
+
+and (max-device-width: 6000px) {
+    html {
+        font-size: 24px;
+    }
+}  */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 36px;
+    }
+
+    .footerLink {
+        font-size: 1.5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    html {
+        font-size: 26px;
+    }
+
+    .footerLink {
+        font-size: 3rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 22px;
+    }
+
+    .footerLink {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    html {
+        font-size: 16px;
+    }
+
+    .footerLink {
+        font-size: 1rem;
+    }
+}
+
+#email {
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: none;
+    color: car(--textBlack);
+}
